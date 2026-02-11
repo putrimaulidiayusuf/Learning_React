@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script type="text/babel">
+const {useState}=React;
+
+function Counter(){
+  const [c,setC]=useState(0);
+  return(
+    <>
+      <button onClick={()=>setC(c-1)}>-</button>
+      {c}
+      <button onClick={()=>setC(c+1)}>+</button>
+      <br/>
+      <button onClick={()=>setC(0)}>reset</button>
+    </>
+  );
+}
+
+ReactDOM.createRoot(root).render(<Counter/>);
+</script>
+
+</body>
+</html>
