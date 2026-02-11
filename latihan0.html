@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar DOM</title>
+</head>
+<body>
+
+  <div id="app"></div>
+
+  <script type="text/javascript">
+    const app = document.getElementById('app');
+    const header = document.createElement('h1');
+    const link = document.createElement('a');
+    link.href = 'https://reactjs.org/';
+    // link.setAttribute('href', 'https://reactjs.org/');
+    link.textContent = 'React Official Website';
+    app.appendChild(link);
+    const headerContent = document.createTextNode('Belajar React0 🚀');
+    header.appendChild(headerContent);
+    app.appendChild(header);
+  </script>
+
+</body>
+</html>

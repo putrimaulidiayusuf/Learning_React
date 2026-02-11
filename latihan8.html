@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lingkaran</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+const { useState } = React;
+
+function Lingkaran() {
+  const [r, setR] = useState(0);
+
+  return (
+    <>
+      <h2>Lingkaran</h2>
+      <input placeholder="Jari-jari" type="number" onChange={e=>setR(e.target.value)} /><br/>
+      <p>Luas: {(Math.PI * r * r).toFixed(2)}</p>
+      <p>Keliling: {(2 * Math.PI * r).toFixed(2)}</p>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<Lingkaran />);
+</script>
+</body>
+</html>
